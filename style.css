@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;		
+	}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	}
+
+body {
+	background-color: #c9d6bb;
+	font-size: 20px;
+	font-family: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+	}
+
+header {
+	display: block;
+	background-color: #46777c;
+	padding: 15px 30px;
+	border: 1px solid #46777c;
+	border-radius: 20px;
+	text-align: center;
+	margin-top: 30px;
+	color: white;
+	} 
+
+a {
+	text-decoration: none;
+	color: #007c85;
+	}
+
+a:hover {
+	color: #a3594f;
+	text-decoration: underline;
+	}
+
+.sidebar @media (width <951px) {
+	display: float;
+	position: fixed;
+	top: 10%;
+	left: 0;
+	width: 20%;
+	padding-right: 20px;
+	padding-left: 20px;
+	border-right: 5px solid #007c85;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: right;
+	overflow: hidden;
+	color: #007c85;
+	}
+	. sidebar @ media (width <950px) {
+		display: block;
+		width: 100%;
+		padding: 5px 20px;
+		font-size: 1em;
+		color: white;
+		text-align: center;
+		}
+		.sidebar ul{
+			list-style-type: none;
+			font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+			font-weight: bolder;
+			@ media (width <950px) {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				}
+			}
+		.sidebar li{
+			margin-bottom: 10px;
+			@media (width <950px) {
+				width: 45%;
+				display: block;
+				background-color: #007c85;
+				padding: 10px 20px;
+				margin: 5px;
+				overflow: hidden;
+				}
+			}
+		.sidebar li:hover @media (width <950px){
+			background-color: #a3594f;
+			color: white;
+			text-decoration: underline;
+			}
+		.sidebar a @media (width <950px){
+			color: white;
+			}
+
+.sidebar2 @media (width <950px) {
+	display: float;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 15%;
+	}
+	.sidebar2 @media (width >951px) {
+			display: block;
+			margin: 0 auto;
+			width: 40%;
+			padding-top: 30px;
+			}
+	
+h3 {
+	color: #00200d;
+	margin-bottom: 10px;
+	}
+
+p {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	}
+
+.page {
+	margin-left: 23%;
+	margin-right: 15%;
+	}
+	.main {
+		background-color: white;
+		margin-top: 30px;
+		padding: 10px;
+		border: 2px dashed #46777c;
+		border-radius: 20px;
+		padding: 10px 20px;
+		}
+
+img {
+	display: block;
+	width: 90%;
+	object-fit: fill;
+	margin: 0 auto;
+	}
+
+.sub {
+	text-align: center;
+	font-style: italic;
+	}
+
+footer {
+	margin-top: 50px;
+	}
+	footer p {
+		padding-left: 20px;
+	}
