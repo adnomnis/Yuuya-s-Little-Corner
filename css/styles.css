@@ -3,17 +3,32 @@
 	padding: 0;
 	box-sizing: border-box;		
 }
+:root {
+	--color-bg: #c9d6bb;
+	--color-brand: #007c85;
+	--color-brand-gray: #46777c;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
 
 body {
-	background-color: #c9d6bb;
+	background-color: var(--color-bg);
 	font-size: 20px;
+}
+
+.theme-microblog {
+	--color-bg: #dbd1b2;
+	--color-brand: #706b8b;
+	--color-brand-gray: #6f6f6f;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
 }
 
 header {
 	display: block;
-	background-color: #46777c;
+	background-color: var(--color-brand-gray);
 	padding: 15px 30px;
-	border: 1px solid #46777c;
+	border: 1px solid var(--color-brand-gray);
 	border-radius: 20px;
 	text-align: center;
 	margin-top: 30px;
@@ -22,11 +37,11 @@ header {
 
 a{
 	text-decoration: none;
-	color: #007c85;
+	color: var(--color-brand);
 }
 
 a:hover{
-	color: #a3594f;
+	color: var(--color-accent);
 	text-decoration: underline;
 }
 
@@ -44,12 +59,12 @@ margin-bottom: 10px;}
 	width: 20%;
 	padding-right: 20px;
 	padding-left: 20px;
-	border-right: 5px solid #007c85;
+	border-right: 5px solid var(--color-brand);
 	font-size: 1.2em;
 	font-weight: bold;
 	text-align: right;
 	overflow: hidden;
-	color: #007c85;
+	color: var(--color-brand);
 }
 
 .sidebar2 {
@@ -72,12 +87,12 @@ margin-bottom: 10px;}
 .button{
 	width: 45%;
 	display: block;
-	background-color: #007c85;
+	background-color: var(--color-brand);
 	padding: 10px 20px;
 	margin: 5px;
 	overflow: hidden;
 	text-align: center;
-	border: #007c85 solid 1px;
+	border: var(--color-brand) solid 1px;
 	border-radius: 20px;
 }
 
@@ -86,7 +101,7 @@ margin-bottom: 10px;}
 }
 
 h3 {
-	color: #00200d;
+	color: var(--color-text);
 	margin-bottom: 10px;
 }
 
@@ -104,7 +119,7 @@ p{
 .main {
 	background-color: white;
 	margin-top: 30px;
-	border: 2px dashed #46777c;
+	border: 2px dashed var(--color-brand-gray);
 	border-radius: 20px;
 	padding: 10px 20px;
 }
@@ -112,12 +127,12 @@ p{
 .main-s{
 	background-color: white;
 	margin-top: 30px;
-	border: 5px solid #46777c;
+	border: 5px solid var(--color-brand-gray);
 	border-radius: 20px;
 	padding: 10px 20px;
 	height: 200px;
 	overflow: scroll;
-	scrollbar-color: #46777c white;
+	scrollbar-color: var(--color-brand-gray) white;
 }
 
 img {
@@ -152,7 +167,7 @@ img {
 	align-content: center;
 	display: block;
 	background-color: white;
-	border: 2px dashed #46777c;
+	border: 2px dashed var(--color-brand-gray);
 	border-radius: 20px;
 	padding: 20px;
 	overflow: hidden;
@@ -165,7 +180,7 @@ img {
 	margin-right: 2.8%;
 	background-color: white;
 	margin-top: 30px;
-	border: 2px dashed #46777c;
+	border: 2px dashed var(--color-brand-gray);
 	border-radius: 20px;
 	padding: 10px 20px;
 }

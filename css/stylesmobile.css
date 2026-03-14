@@ -3,16 +3,23 @@
 	padding: 0;
 	box-sizing: border-box;		
 }
+:root {
+	--color-bg: #c9d6bb;
+	--color-brand: #007c85;
+	--color-brand-gray: #46777c;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
 
 body {
-	background-color: #c9d6bb;
+	background-color: var(--color-bg);
 }
 
 header {
 	display: block;
-	background-color: #46777c;
+	background-color: var(--color-brand-gray);
 	padding: 15px 30px;
-	border: 1px solid #46777c;
+	border: 1px solid var(--color-brand-gray);
 	border-radius: 20px;
 	text-align: center;
 	margin-top: 30px;
@@ -22,11 +29,11 @@ header {
 
 a{
 	text-decoration: none;
-	color: #007c85;
+	color: var(--color-brand);
 }
 
 a:hover{
-	color: #a3594f;
+	color: var(--color-accent);
 	text-decoration: underline;
 }
 
@@ -67,7 +74,7 @@ li:not(.sidebar li) {
 .sidebar li{
 	width: 45%;
 	display: block;
-	background-color: #007c85;
+	background-color: var(--color-brand);
 	padding: 10px 20px;
 	margin: 5px;
 	overflow: hidden;
@@ -76,12 +83,12 @@ li:not(.sidebar li) {
 .button{
 	width: 45%;
 	display: block;
-	background-color: #007c85;
+	background-color: var(--color-brand);
 	padding: 10px 20px;
 	margin: 5px;
 	overflow: hidden;
 	text-align: center;
-	border: #007c85 solid 1px;
+	border: var(--color-brand) solid 1px;
 	border-radius: 20px;
 }
 
@@ -90,7 +97,7 @@ li:not(.sidebar li) {
 }
 
 .sidebar li:hover{
-	background-color: #a3594f;
+	background-color: var(--color-accent);
 	color: white;
 	text-decoration: underline;
 }
@@ -100,7 +107,7 @@ li:not(.sidebar li) {
 }
 	
 h3 {
-	color: #00200d;
+	color: var(--color-text);
 	margin-bottom: 10px;
 }
 
@@ -117,7 +124,7 @@ p{
 .main, .photo{
 	background-color: white;
 	margin-top: 30px;
-	border: 2px dashed #46777c;
+	border: 2px dashed var(--color-brand-gray);
 	border-radius: 20px;
 	padding: 10px;
 }
@@ -125,12 +132,12 @@ p{
 .main-s{
 	background-color: white;
 	margin-top: 30px;
-	border: 5px solid #46777c;
+	border: 5px solid var(--color-brand-gray);
 	border-radius: 20px;
 	padding: 10px 20px;
 	height: 200px;
 	overflow: scroll;
-	scrollbar-color: #46777c white;
+	scrollbar-color: var(--color-brand-gray) white;
 }
 
 
@@ -145,7 +152,7 @@ p{
 	background-color: white;
 	margin: 0 auto;
 	margin-top: 30px;
-	border: 2px dashed #46777c;
+	border: 2px dashed var(--color-brand-gray);
 	border-radius: 20px;
 	padding: 10px;
 	
