@@ -30,6 +30,12 @@ a:hover{
 	text-decoration: underline;
 }
 
+ul { margin-left: 1rem; padding-left: 1rem; }
+
+li { 
+margin-left: 0.2rem; 
+margin-bottom: 10px;}
+
 .sidebar {
 	display: float;
 	position: fixed;
@@ -61,6 +67,22 @@ a:hover{
 
 .sidebar li{
 	margin-bottom: 20px;
+}
+
+.button{
+	width: 45%;
+	display: block;
+	background-color: #007c85;
+	padding: 10px 20px;
+	margin: 5px;
+	overflow: hidden;
+	text-align: center;
+	border: #007c85 solid 1px;
+	border-radius: 20px;
+}
+
+.button a{
+	color: white;
 }
 
 h3 {
