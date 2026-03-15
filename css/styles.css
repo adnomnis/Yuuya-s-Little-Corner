@@ -17,10 +17,42 @@ body {
 }
 
 .theme-microblog {
-	--color-bg: #dbd1b2;
-	--color-brand: #706b8b;
-	--color-brand-gray: #6f6f6f;
+	--color-bg: #b1a8b1;
+	--color-brand: #32384d;
+	--color-brand-gray:#323a3c;
 	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
+
+.theme-art {
+	--color-bg: #eee2d4;
+	--color-brand: #7a5d57;
+	--color-brand-gray:#b38069;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
+
+.theme-oc {
+	--color-bg: #1e2429;
+	--color-brand: #e34a0e;
+	--color-brand-gray:#35aaee;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
+
+.theme-fandom {
+	--color-bg: #c4d1d4;
+	--color-brand: #747f8e;
+	--color-brand-gray:#2b3548;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
+
+.theme-limbus {
+	--color-bg: #541c1c;
+	--color-brand: #d99c7f;
+	--color-brand-gray:#350b0b;
+	--color-accent: #007c85;
 	--color-text: #00200d;
 }
 
