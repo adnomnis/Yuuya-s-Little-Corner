@@ -56,6 +56,18 @@ body {
 	--color-text: #00200d;
 }
 
+.theme-prsk {
+	--color-bg: #ffd7d7;
+	--color-brand: #e9569a;
+	--color-brand-gray:#c98f8f;
+	--color-accent: #007c85;
+	--color-text: #00200d;
+	background-image: url(../sub-fandom/prsk/doa.webp);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 header {
 	display: block;
 	background-color: var(--color-brand-gray);
@@ -228,4 +240,8 @@ footer {
 
 footer p {
 	text-align: center;
+}
+
+.al {
+	color: #35aaee;
 }
