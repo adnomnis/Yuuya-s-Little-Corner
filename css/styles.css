@@ -60,7 +60,7 @@ body {
 	--color-bg: #ffd7d7;
 	--color-brand: #e9569a;
 	--color-brand-gray:#c98f8f;
-	--color-accent: #007c85;
+	--color-accent: #7cecf4;
 	--color-text: #00200d;
 	background-image: url(../sub-fandom/prsk/doa.webp);
     background-size: 100% auto;
@@ -181,7 +181,7 @@ p{
 
 img {
 	display: block;
-	width: 90%;
+	max-width: 90%;
 	height: auto;
 	object-fit: contain;
 	margin: 0 auto;
@@ -196,6 +196,11 @@ img {
 .stamp img {
 	display: inline;
 	width: auto;
+}
+.fan img {
+	display: block;
+	margin: 15px;
+	width: 25%;
 }
 
 .gallery {
@@ -232,6 +237,12 @@ img {
 .sub {
 	text-align: center;
 	font-style: italic;
+}
+
+iframe {
+	width: 90%;
+	height: auto;
+	aspect-ratio: 16/9;
 }
 
 footer {
