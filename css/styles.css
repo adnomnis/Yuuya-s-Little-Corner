@@ -131,9 +131,9 @@ margin-bottom: 10px;}
 .button{
 	width: 45%;
 	display: block;
+	margin: 0 auto;
 	background-color: var(--color-brand);
 	padding: 10px 20px;
-	margin: 5px;
 	overflow: hidden;
 	text-align: center;
 	border: var(--color-brand) solid 1px;
