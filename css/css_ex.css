@@ -9,15 +9,21 @@
 	src: url(../font/TF-Handwriting.ttf);
 }
 
+
 @font-face {
-	font-family: "Ujiya";
-	src: url(../font/ujiya.otf);
+	font-family: "CrimsonText";
+	src: url(../font/CrimsonText-Regular.ttf);
 }
+
+@font-face {
+	font-family: "Montserrat";
+	src: url(../font/Montserrat-VariableFont_wght.ttf);
+}
+
 
 body {
 	background-color: var(--color-bg);
-	font-family: serif;
-	font-size: 20px;
+	font-family: "CrimsonText", serif;
 }
 
 /* ----------- Colors Start ----------- */
@@ -129,6 +135,15 @@ a:hover{
 	margin: 1% 5%;
 }
 
+.container-blog {
+	display: grid;
+	grid-gap: 20px;
+	margin: 1% 5%;
+	grid-template: 
+	"nav"
+	"main";
+}
+
 header{ grid-area: header; }
 main{ grid-area: main; }
 .sidebar2 { grid-area: sidebar2; }
@@ -136,7 +151,7 @@ nav{ grid-area: nav; }
 
 header {
 	font-family: "Handwriting", serif;
-	font-size: 3em;
+	font-size: 2em;
 	color: var(--color-brand-gray);
 	padding: 15px 30px;
 	text-align: center;
@@ -159,8 +174,8 @@ nav{
 	height: fit-content;
 }
 	.nav-link {
-		font-family: "Ujiya", serif;
-		font-size: 1.5em;
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
 		text-align: center;
 		padding: 10px 20px;
 		background-color: var(--color-brand);
@@ -175,7 +190,6 @@ nav{
 		}
 
 		.container-linkpg .nav-link{
-		font-size: 1.5em;
 		text-align: right;
 		border: 1px solid transparent;
 		border-radius: 20px 0 0 20px;
@@ -195,7 +209,12 @@ nav{
 .main-card {
 	background-color: white;
 	border: 2px solid var(--color-brand-gray);
+	
 }
+
+	.main-card	p {
+		padding: 0 20px 0 20px;
+	}
 
 	.main-card h3 {
 		background-color: var(--color-bg);
@@ -203,17 +222,10 @@ nav{
 		padding: 10px 20px;
 		}
 
-	.main-card-content {
-		padding: 0 20px 5px 20px;
-		}
-
 	.main-card ul {
-		padding: 0 20px;
+		padding: 0 20px 0 20px;
 		margin-left: 1rem; 
-	}
-
-	.main-card li {
-		padding-bottom: 10px;
+		margin-bottom: 10px;
 	}
 
 .scrollbox {
@@ -221,7 +233,6 @@ nav{
 	overflow: scroll;
 	scrollbar-color: var(--color-brand-gray) white;
 	margin: 0 5px 5px 0;
-	padding: 0 20px;
 }
 
 /* ----------- Layout Ends ----------- */
@@ -250,6 +261,7 @@ img {
     image-rendering: crisp-edges;
     image-rendering: pixelated;
     image-rendering: -webkit-optimize-contrast;
+	padding: 0 20px 0 20px;
 }
 	.stamp img {
 		display: inline;
@@ -297,6 +309,11 @@ img {
 	font-style: italic;
 }
 
+footer {
+	margin-top: 5%;
+	text-align: center;
+}
+
 footer p {
 	text-align: center;
 }
@@ -327,16 +344,7 @@ footer p {
 		padding-top: 40px;
 	}
 
-	.container-linkpg .nav-link{
-		border: 1px solid transparent;
-		border-radius: 20px 20px 0 0;
-	}
-
 	header{
-			font-size: 1em;
-		}
-
-	footer {
-		margin-top: 20px;
+		font-size: 1.5em;
 	}
 }
