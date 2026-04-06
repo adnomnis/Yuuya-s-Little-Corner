@@ -1,0 +1,359 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;		
+}
+
+@font-face {
+	font-family: "Handwriting";
+	src: url(../font/TF-Handwriting.ttf);
+}
+
+@font-face {
+	font-family: "Ujiya";
+	src: url(../font/ujiya.otf);
+}
+
+@font-face {
+	font-family: "Timeless";
+	src: url(../font/Timeless.ttf);
+}
+
+body {
+	background-color: var(--color-bg);
+	font-family: "Timeless", serif;
+	font-size: 20px;
+}
+
+/* ----------- Colors Start ----------- */
+
+:root {
+	--color-bg: #c9d6bb;
+	--color-brand: #007c85;
+	--color-brand-gray: #46777c;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
+
+.theme-microblog {
+	--color-bg: #b1a8b1;
+	--color-brand: #483297;
+	--color-brand-gray:#323a3c;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
+
+.theme-art {
+	--color-bg: #eee2d4;
+	--color-brand: #7a5d57;
+	--color-brand-gray:#b38069;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+	background-image: url(../images/recycled-paper.webp);
+    background-size: 100% auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.theme-oc {
+	--color-bg: #1e2429;
+	--color-brand: #e34a0e;
+	--color-brand-gray:#35aaee;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
+
+.theme-fandom {
+	--color-bg: #c4d1d4;
+	--color-brand: #747f8e;
+	--color-brand-gray:#2b3548;
+	--color-accent: #a3594f;
+	--color-text: #00200d;
+}
+
+.theme-limbus {
+	--color-bg: #541c1c;
+	--color-brand: #fff7f3;
+	--color-brand-gray:#350b0b;
+	--color-accent: #007c85;
+	--color-text: #00200d;
+	background-image: url(../sub-fandom/mephis.webp);
+    background-size: auto 100%;
+	background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.theme-prsk {
+	--color-bg: #ffd7d7;
+	--color-brand: #e9569a;
+	--color-brand-gray:#c98f8f;
+	--color-accent: #7cecf4;
+	--color-text: #00200d;
+	background-image: url(../sub-fandom/prsk/doa.webp);
+    background-size: 100% auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/* ----------- Colors End ----------- */
+
+a{
+	text-decoration: none;
+	color: var(--color-brand);
+}
+
+a:hover{
+	color: var(--color-accent);
+	text-decoration: underline;
+}
+
+/* ----------- Layout Starts ----------- */
+
+
+.container-index {
+	display: grid;
+	column-gap: 20px;
+	row-gap: 20px;
+	grid-template: 
+		"header header"
+		"main sidebar2"
+		/ 3fr 2fr
+	;
+	margin: 1% 5%;
+}
+
+.container-linkpg {
+	display: grid;
+	column-gap: 20px;
+	row-gap: 20px;
+	grid-template: 
+		"nav main sidebar2"
+		/ 1fr 3fr 3fr
+	;
+	margin: 1% 5%;
+}
+
+header{ grid-area: header; }
+main{ grid-area: main; }
+.sidebar2 { grid-area: sidebar2; }
+nav{ grid-area: nav; }
+
+header {
+	font-family: "Handwriting", serif;
+	font-size: 3em;
+	color: var(--color-brand-gray);
+	padding: 15px 30px;
+	text-align: center;
+} 
+		
+
+main, .sidebar2{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	height: auto;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+	gap: 10px;
+	height: fit-content;
+}
+	.nav-link {
+		font-family: "Ujiya", serif;
+		font-size: 1.5em;
+		text-align: center;
+		padding: 10px 20px;
+		background-color: var(--color-brand);
+		flex-grow: 1;
+	}
+
+		@media only screen and (min-width: 751px){
+
+		 .container-linkpg nav {
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.container-linkpg .nav-link{
+		font-size: 1.5em;
+		text-align: right;
+		border: 1px solid transparent;
+		border-radius: 20px 0 0 20px;
+		}
+
+		}
+
+	.nav-link a{
+		color: white;
+	}
+		
+	nav :hover{
+		background-color: var(--color-accent);
+	}
+
+
+
+.main-card {
+	background-color: white;
+	border: 2px solid var(--color-brand-gray);
+	border-radius: 10px;
+}
+
+	.main-card h3 {
+		background-color: var(--color-bg);
+		border-bottom: 2px solid var(--color-brand-gray);
+		padding: 10px 20px;
+		border-radius: 10px 10px 0 0;
+		}
+
+	.main-card-content {
+		padding: 0 20px 5px 20px;
+		}
+
+	.main-card ul {
+		padding: 0 20px;
+		margin-left: 1rem; 
+	}
+
+	.main-card li {
+		padding-bottom: 10px;
+	}
+
+.scrollbox {
+	height: 200px;
+	overflow: scroll;
+	scrollbar-color: var(--color-brand-gray) white;
+	margin: 0 5px 5px 0;
+	padding: 0 20px;
+}
+
+/* ----------- Layout Ends ----------- */
+
+.button{
+	display: block;
+	margin: 0 auto;
+	background-color: var(--color-brand);
+	padding: 10px 20px;
+	overflow: hidden;
+	text-align: center;
+	border: var(--color-brand) solid 1px;
+	border-radius: 10px;
+}
+
+.button a{
+	color: white;
+}
+
+h3 {
+	color: var(--color-text);
+	margin-bottom: 10px;
+}
+
+p{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: justify;
+}
+
+img {
+	display: block;
+	max-width: 90%;
+	height: auto;
+	object-fit: contain;
+	margin: 0 auto;
+}
+
+.stamp {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+}
+	.stamp img {
+		display: inline;
+		width: auto;
+		padding: 0;
+		}
+
+/* ----------- Gallery Ends ----------- */
+
+.gallery {
+	margin-top: 30px;
+	margin-left: 23%;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.photo {
+	width: 47%;
+	align-content: center;
+	display: block;
+	background-color: white;
+	border: 2px dashed var(--color-brand-gray);
+	border-radius: 20px;
+	padding: 20px;
+	overflow: hidden;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.gcard {
+	margin-left: 23%;
+	margin-right: 2.8%;
+	background-color: white;
+	margin-top: 30px;
+	border: 2px dashed var(--color-brand-gray);
+	border-radius: 20px;
+	padding: 10px 20px;
+}
+
+/* ----------- Gallery Ends ----------- */
+
+.sub {
+	text-align: center;
+	font-style: italic;
+}
+
+footer p {
+	text-align: center;
+}
+
+.al {
+	color: #35aaee;
+}
+
+/* ----------- Mobile ----------- */
+
+@media only screen and (max-width: 750px){
+	.container-index {
+		grid-template: 
+			"header"
+			"main"
+			"sidebar2"
+		;
+		grid-gap: 20px;
+	}
+
+	.container-linkpg {
+		grid-template: 
+			"nav"
+			"main"
+			"sidebar2"
+		;
+		grid-gap: 20px;
+	}
+
+	header{
+			font-size: 2em;
+		}
+
+	footer {
+		margin-top: 20px;
+	}
+}
