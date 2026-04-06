@@ -14,14 +14,9 @@
 	src: url(../font/ujiya.otf);
 }
 
-@font-face {
-	font-family: "Timeless";
-	src: url(../font/Timeless.ttf);
-}
-
 body {
 	background-color: var(--color-bg);
-	font-family: "Timeless", serif;
+	font-family: serif;
 	font-size: 20px;
 }
 
@@ -185,8 +180,7 @@ nav{
 		border: 1px solid transparent;
 		border-radius: 20px 0 0 20px;
 		}
-
-		}
+	}
 
 	.nav-link a{
 		color: white;
@@ -201,14 +195,12 @@ nav{
 .main-card {
 	background-color: white;
 	border: 2px solid var(--color-brand-gray);
-	border-radius: 10px;
 }
 
 	.main-card h3 {
 		background-color: var(--color-bg);
 		border-bottom: 2px solid var(--color-brand-gray);
 		padding: 10px 20px;
-		border-radius: 10px 10px 0 0;
 		}
 
 	.main-card-content {
@@ -233,21 +225,6 @@ nav{
 }
 
 /* ----------- Layout Ends ----------- */
-
-.button{
-	display: block;
-	margin: 0 auto;
-	background-color: var(--color-brand);
-	padding: 10px 20px;
-	overflow: hidden;
-	text-align: center;
-	border: var(--color-brand) solid 1px;
-	border-radius: 10px;
-}
-
-.button a{
-	color: white;
-}
 
 h3 {
 	color: var(--color-text);
@@ -347,10 +324,16 @@ footer p {
 			"sidebar2"
 		;
 		grid-gap: 20px;
+		padding-top: 40px;
+	}
+
+	.container-linkpg .nav-link{
+		border: 1px solid transparent;
+		border-radius: 20px 20px 0 0;
 	}
 
 	header{
-			font-size: 2em;
+			font-size: 1em;
 		}
 
 	footer {
