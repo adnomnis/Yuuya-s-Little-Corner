@@ -7,34 +7,24 @@
     <title>Yuuya's Website</title>
     <link
       rel="stylesheet"
-      media="screen and (min-width: 951px)"
-      href="../css/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 950px)"
-      href="../css/stylesmobile.css"
+      href="../css/css_ex.css"
     />
     <link rel="icon" type="image/png" href="images/favicon.ico">
-    <style>
-      .gcard, .photo{
-        border-style: solid;
-      }
-    </style>
   </head>
   <body class="theme-art">
-    <div class="page">
-      <header><h1>Welcome to Yuuya's Little Corner!</h1></header>
+
+    <div class="container-gallery">
+
+    <div class="nav-gallery">
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="plein.html">Plein Airpril</a>
+        <a href="march.html">March Hotel</a>
+        <a href="cms.html">Commission</a>
+    </nav>
     </div>
 
-    <div class="sidebar">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="plein.html">Plein Airpril</a></li>
-        <li><a href="march.html">March Hotel</a></li>
-        <li><a href="cms.html">Commission</a></li>
-      </ul>
-    </div>
+    <div class="gallery">
 
     <div class="gcard">
       <h3>Quests from "The March Hotel" Discord Server [COMPLETED]</h3>
@@ -46,7 +36,7 @@
         challenges to choose from.. it might be overwhelming to keep up at times. 
         Will it be something to look forward yearly?</p>
     </div>
-    <div class="gallery">
+
       <div class="photo">
         <img src="march/daily2.webp">
         <br />
@@ -63,12 +53,7 @@
         <img src="march/iyowa.webp">
         <br />
         <div class="sub">
-          ALBUM COVERS?!
-          <a
-            href="https://music.youtube.com/playlist?list=OLAK5uy_nQ_EN3RbSEltva_PBlCtINri7p-sUXJEI&si=p-iLS9EogX9zGj3X"
-            >(Iyowa's album)</a
-          >
-        </div>
+          ALBUM COVERS?!<a href="https://music.youtube.com/playlist?list=OLAK5uy_nQ_EN3RbSEltva_PBlCtINri7p-sUXJEI&si=p-iLS9EogX9zGj3X">(Iyowa's album)</a></div>
       </div>
 
       <div class="photo">
@@ -140,11 +125,6 @@
       <div class="photo">
         <img src="march/live4.webp">
         <img src="march/live3.webp">
-        <br />
-        <div class="sub">live streamed gesture 4/17</div>
-      </div>
-
-      <div class="photo">
         <img src="march/live2.webp">
         <img src="march/live1.webp">
         <br />
@@ -174,14 +154,13 @@
         <br />
         <div class="sub">Figure 8 - No Erase</div>
       </div>
-      </div>
-      <div class="gcard" style="margin-top: 10px;">
+
+      <div class="gcard">
       <p>13.03.2026: I feel emotionally drained due to art-related work, as you can 
         see my daily submission quality decreased slightly. I need to take a rest..
       </p>
       </div>
 
-      <div class="gallery">
       <div class="photo">
         <img src="march/daily9.jpg">
         <br />
@@ -327,30 +306,46 @@
         <br />
         <div class="sub">Daily Day 27</div>
       </div>
-    </div>
 
-    <div class="gcard" style="margin-top: 10px;">
+    <div class="gcard">
       <p>30.03.2026: As you see, works hit again. I might go bankrupt in the end,
       because I don't have enough coin to pay the rent haha.. Kinda poetic, isn't it? March is almost ended.</p>
      </div>
 
-    <div class="gcard" style="margin-top: 10px;">
+    <div class="gcard">
       <p>01.04.2026: Biggest plot twist ever. I was giving up on the idea of "submitting daily in order to pay rent", so I obtained "Bankrupt" role right in the last day of the event. Out of nowhere, unknown Philanthropist transferred me 50 coins. Pleasantly surprised, I submitted last drawing as farewell piece.</p>
      </div>
 
-     <div class="gcard" style="margin-top: 10px;">
-     <img src="march/bye.webp">
+     <div class="gcard">
+     <center><img src="march/bye.webp"></center>
         <div class="sub">Daily Day 31</div>
      </div>
 
-      <div class="gcard" style="margin-top: 10px;">
+      <div class="gcard">
       <p>The March Hotel 2026 happened in the right time for me. I bought Huion Kamvas 13 and needed adaptation moving from screenless XP-Pen Deco LW, the quests were the right space to experiment. If you have noticed, most of the dailies are assets for this blog, it became another reason to push myself.</p>
       <p>By the end of March 2026, realization hit my mind. Nowadays, I use art for sake of connecting with others. Sense of community. An activity to keep mind and hands engage. May us someday fish in fountain and be fined again.</p>
      </div>
+
+    </div>
+    </div>
   
     <footer>
       <hr />
       <p>created by Yuuya @adnomnis</p>
     </footer>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img">
+</div>
+
+<script>
+  document.querySelectorAll('.photo img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    });
+  });
+</script>
   </body>
 </html>

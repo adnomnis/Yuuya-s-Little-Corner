@@ -7,49 +7,52 @@
     <title>Yuuya's Website</title>
     <link
       rel="stylesheet"
-      media="screen and (min-width: 951px)"
-      href="../css/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 950px)"
-      href="../css/stylesmobile.css"
+      href="../css/css_ex.css"
     />
     <link rel="icon" type="image/png" href="images/favicon.ico">
-    <style>
-      .gcard, .photo{
-        border-style: solid;
-      }
-
-      img{
-        width: 30%;
-        display: inline;
-      }
-    </style>
   </head>
   <body class="theme-art">
-    <div class="page">
-      <header><h1>Welcome to Yuuya's Little Corner!</h1></header>
+   <div class="container-gallery">
+
+    <div class="nav-gallery">
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="plein.html">Plein Airpril</a>
+        <a href="march.html">March Hotel</a>
+        <a href="cms.html">Commission</a>
+    </nav>
     </div>
 
-    <div class="sidebar">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="plein.html">Plein Airpril</a></li>
-        <li><a href="march.html">March Hotel</a></li>
-        <li><a href="cms.html">Commission</a></li>
-      </ul>
-    </div>
+      <div class="gallery">
 
-      <div class="gcard">
-        <center><img src="cms/wen_comm_sketchjpg.webp"> <img src="cms/wen_comm_LINE.webp"> <img src="cms/wen_comm_fix.webp"></center>
-        <p class="sub">03.04.2026: Ordered by RoN / @ron_404</p>
+        <div class="photo"><img src="cms/wen_comm_sketchjpg.webp"></div>
+        <div class="photo"><img src="cms/wen_comm_LINE.webp"> </div>
+        <div class="photo"><img src="cms/wen_comm_fix.webp"></div>
+        
+        <div class="gcard">
+          <h3>03.04.2026: Ordered by RoN / @ron_404</h3>
         <p>Featuring their character Wan Wen, who works in Chinese site of Providence Company (RP). The site entrance is linked to casino, hence the background. RoN associates Wen with green color, so despite the lighting being mainly red, they requested the ambience changed to green. RoN specifically mentioned the girl's fierce expression in initial brief.</p>
       </div>
+    </div>
+    </div>
   
     <footer>
       <hr />
       <p>created by Yuuya @adnomnis</p>
     </footer>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img">
+</div>
+
+<script>
+  document.querySelectorAll('.photo img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    });
+  });
+</script>
   </body>
 </html>
