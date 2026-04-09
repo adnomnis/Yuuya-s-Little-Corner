@@ -7,43 +7,75 @@
     <title>Yuuya's Website</title>
     <link
       rel="stylesheet"
-      media="screen and (min-width: 951px)"
-      href="../css/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 950px)"
-      href="../css/stylesmobile.css"
+      href="../css/css_ex.css"
     />
     <link rel="icon" type="image/png" href="../images/favicon.ico">
     <style>
-      .photo, .gcard{
-        border-style: hidden;
+
+      .container{
+	    display: grid;
+    	grid-template: 
+    	"nav"
+    	"gallery"
+    	;
+    	margin: 5%;
+    }
+
+       .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+    }
+
+    nav{
+	  display: flex;
+  	justify-content: center;
+	  flex-shrink: 0;
+	  flex-wrap: wrap;
+	  gap: 10px;
+    margin-bottom: 20px;
+    }
+
+    .nav-button{
+	  width: auto;
+    }
+
+    .label{
+    width: fit-content;
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+    padding: 0 5px;
+    scale: 1.7;
+    rotate: -3deg;
+    background-color: white;
+    }
+
+    .photo{
+      padding: 10px 20px;
+    }
+
+    @media only screen and (max-width: 750px) {
+      .gallery {
+        grid-template-columns: 1fr;
+    }
       }
     </style>
   </head>
   <body class="theme-oc">
-    <div class="page">
-      <header><h1>Welcome to Yuuya's Little Corner!</h1></header>
-    </div>
 
-    <div class="sidebar">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="comm.html">Comms Art</a></li>
-        <li><a href="yap.html">Yapping</a></li>
-        <li><a href="ac-dc.html">Discord Convo</a></li>
-        </ul>
-    </div>
+    <div class="container">
+
+    <nav>
+        <div class="nav-button" style="background-color: #e34a0e;"><a href="../index.html">Home</a></div>
+        <div class="nav-button" style="background-color: #35aaee;"><a href="profile.html">Profile</a></div>
+        <div class="nav-button" style="background-color: #e34a0e;"><a href="comm.html">Comms Art</a></div>
+        <div class="nav-button" style="background-color: #35aaee;"><a href="yap.html">Yapping</a></div>
+        <div class="nav-button" style="background-color: #e34a0e;"><a href="ac-dc.html">Discord Convo</a></div>
+    </nav>
 
     <div class="gallery">
       <div class="photo">
+        <div class="label" style="background-color: #e34a0e;  translate: 20px; margin-bottom: 10px;">Charlie Dyslin</div>
         <img src="p-echa.webp">
-      </div>
-      
-      <div class="photo">
-        <p><strong>Name</strong>: Charlie Dyslin</p>
         <p><strong>Date of Birth</strong>: January 2018</p>
         <p><strong>Original Concept</strong>: Roleplay OC for slice-of-life theme, an architecture student who had high hopes to help others.</p>
         <p><strong>Current personality</strong>: Grounded with hint of skepticism, boisterous, foul-mouthed, sincere.</p>
@@ -57,11 +89,8 @@
       </div>
 
       <div class="photo">
+        <div class="label" style="background-color: #35aaee;  translate: 35px; margin-bottom: 10px;">Alaric Noé Vaillant</div>
         <img src="p-al.webp">
-      </div>
-
-      <div class="photo">
-        <p><strong>Name</strong>: Alaric Noé Vaillant</p>
         <p><strong>Date of Birth</strong>: September 2019</p>
         <p><strong>Original Concept</strong>: Roleplay OC for fantasy/battle theme, an inept and awkward man who focused solely on grinding missions.</p>
         <p><strong>Current personality</strong>: Composed but a playful tease, verbose, soothing presence, snarky.</p>
@@ -75,11 +104,18 @@
       </div>
       </div>
 
-      <div class="gcard" style="margin-top: 10px;">
-        <p>Ship Dynamic: <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/GoodCopBadCop"><span class="al">Good Cop, </span>Bad Cop</a>
+      <div class="gcard">
+        <p><strong>Ship Dynamic:</strong> <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/GoodCopBadCop"><span class="al">Good Cop, </span>Bad Cop</a>
         ║ <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/StraightManAndWiseGuy">Straight Man <span class="al">and Wise Guy</span></a>
         ║ <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/TaremeEyes"><span class="al">Tareme Eyes</span> x <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/TsurimeEyes">Tsurime Eyes</a></a>
         </p> 
+      </div>
+
+      <div class="gcard">
+        <p><strong>Relationship:</strong> Initially they knew each other through mutual friend, but since Charlie was griefing and experiencing outrage related to this person, he seeked comfort from Al. Charlie and Alaric were complete opposite to the point they felt mutual despise, Charlie thought Al was too soft and "couldn't stand for himself", while Al thought Charlie was arrogant and.. <i>scary</i>. Yet the very weakness Charlie perceived from Al, is the cause that made him fall in love first. Charlie was already struggling with sexuality, hence they had tug-of-war for years whether they're in romantic relationship or not. Power struggle happened from time-to-time, you might be surprised with how dominant Al is actually and he won't let Charlie "wins". Eventually they both compromise and agree to be in peace, now they enter stable partnership era.</p>
+        <p></p>
+      </div>
+
       </div>
 
     <footer>

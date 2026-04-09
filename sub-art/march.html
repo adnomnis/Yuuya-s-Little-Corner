@@ -339,7 +339,7 @@
 </div>
 
 <script>
-  document.querySelectorAll('.photo img').forEach(img => {
+  document.querySelectorAll('.photo img, .gcard img').forEach(img => {
     img.style.cursor = 'pointer';
     img.addEventListener('click', () => {
       document.getElementById('lightbox-img').src = img.src;

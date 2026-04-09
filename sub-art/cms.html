@@ -10,6 +10,11 @@
       href="../css/css_ex.css"
     />
     <link rel="icon" type="image/png" href="images/favicon.ico">
+    <style>
+      .photo{
+        padding: 10px;
+      }
+    </style>
   </head>
   <body class="theme-art">
    <div class="container-gallery">
@@ -44,15 +49,5 @@
     <div id="lightbox" onclick="this.style.display='none'">
   <img id="lightbox-img">
 </div>
-
-<script>
-  document.querySelectorAll('.photo img').forEach(img => {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', () => {
-      document.getElementById('lightbox-img').src = img.src;
-      document.getElementById('lightbox').style.display = 'flex';
-    });
-  });
-</script>
   </body>
 </html>
