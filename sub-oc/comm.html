@@ -7,36 +7,54 @@
     <title>Yuuya's Website</title>
     <link
       rel="stylesheet"
-      media="screen and (min-width: 951px)"
-      href="../css/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 950px)"
-      href="../css/stylesmobile.css"
+      href="../css/css_ex.css"
     />
     <link rel="icon" type="image/png" href="../images/favicon.ico">
     <style>
-      .photo, .gcard{
-        border-style: hidden;
-      }
+      .container{
+	    display: grid;
+    	grid-template: 
+    	"nav"
+    	"gallery"
+    	;
+    	margin: 5%;
+      grid-gap: 20px;
+    }
+
+       nav{
+	  display: flex;
+  	justify-content: center;
+	  flex-shrink: 0;
+	  flex-wrap: wrap;
+	  gap: 10px;
+    margin-bottom: 20px;
+    }
+
+    .nav-button{
+	  width: auto;
+    }
+
+    h3{
+      background:  linear-gradient(93deg,rgba(53, 170, 238, 1) 40%, rgba(69, 77, 163, 1) 68%, rgba(227, 74, 14, 1) 100%);
+    }
+
+    .photo{
+      padding: 15px;
+    }
     </style>
   </head>
   <body class="theme-oc">
     <div class="page">
-      <header><h1>Welcome to Yuuya's Little Corner!</h1></header>
-    </div>
+      <div class="container">
 
-    <div class="sidebar">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-         <li><a href="profile.html">Profile</a></li>
-        <li><a href="comm.html">Comms Art</a></li>
-         <li><a href="yap.html">Yapping</a></li>
-        <li><a href="ac-dc.html">Discord Convo</a></li>
-      </ul>
-    </div>
+    <nav>
+        <div class="nav-button" style="background-color: #e34a0e;"><a href="../index.html">Home</a></div>
+        <div class="nav-button" style="background-color: #35aaee;"><a href="profile.html">Profile</a></div>
+        <div class="nav-button" style="background-color: #e34a0e;"><a href="comm.html">Comms Art</a></div>
+        <div class="nav-button" style="background-color: #35aaee;"><a href="yap.html">Yapping</a></div>
+    </nav>
 
+    <div class="gallery">
     <div class="gcard">
       <h3>Commissions I bought from another artist!</h3>
       <em>Updated: 07.03.2026</em>
@@ -53,7 +71,7 @@
         lol. Don't expect much addition in the future..
       </p>
     </div>
-    <div class="gallery">
+    
       <div class="photo">
         <img src="comm/deshaime.webp">
         <br />
@@ -162,6 +180,7 @@
           before sleep.
         </p>
       </div>
+    </div>
     </div>
 
     <footer>

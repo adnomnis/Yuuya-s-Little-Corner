@@ -4,11 +4,6 @@
 	box-sizing: border-box;		
 }
 
-@font-face {
-	font-family: "Handwriting";
-	src: url(../font/TF-Handwriting.ttf);
-}
-
 
 @font-face {
 	font-family: "CrimsonText";
@@ -63,39 +58,6 @@ body {
 	--color-text: #00200d;
 }
 
-.theme-fandom {
-	--color-bg: #c4d1d4;
-	--color-brand: #747f8e;
-	--color-brand-gray:#2b3548;
-	--color-accent: #a3594f;
-	--color-text: #00200d;
-}
-
-.theme-limbus {
-	--color-bg: #541c1c;
-	--color-brand: #fff7f3;
-	--color-brand-gray:#350b0b;
-	--color-accent: #007c85;
-	--color-text: #00200d;
-	background-image: url(../sub-fandom/mephis.webp);
-    background-size: auto 100%;
-	background-position: center;
-    background-repeat: repeat;
-    background-attachment: fixed;
-}
-
-.theme-prsk {
-	--color-bg: #ffd7d7;
-	--color-brand: #e9569a;
-	--color-brand-gray:#c98f8f;
-	--color-accent: #7cecf4;
-	--color-text: #00200d;
-	background-image: url(../sub-fandom/prsk/doa.webp);
-    background-size: 100% auto;
-    background-repeat: repeat;
-    background-attachment: fixed;
-}
-
 /* ----------- Colors End ----------- */
 
 a{
@@ -135,18 +97,19 @@ a:hover{
 	display: grid;
 	column-gap: 2%;
 	grid-template: 
-	"nav gallery"
+	"nav-gallery gallery"
 	/1fr 7fr
 	;
 	margin: 20px;
-	min-width: none;
 	overflow: hidden;
+	padding-bottom: 20px;
 }
 
 main{ grid-area: main; }
 .sidebar2 { grid-area: sidebar2; }
 nav{ grid-area: nav; }
 .gallery { grid-area: gallery; }
+.nav-gallery { grid-area: nav-gallery; }
 		
 main, .sidebar2{
 	display: flex;
@@ -159,7 +122,7 @@ main, .sidebar2{
 
 nav{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	flex-shrink: 0;
 	flex-wrap: wrap;
 	gap: 10px;
@@ -187,16 +150,17 @@ nav{
 	}
 
 .nav-gallery {
-	margin: 10px 30px;
+	margin: 10px 0 10px 30px;
 	font-family: "Montserrat", serif;
 	font-weight: bold;
 	font-size: 1.5em;
 }
 	.nav-gallery a{
+		display: block;
+		padding: 10px 0;
 		-webkit-text-stroke: 5px white;
    		paint-order: stroke fill;
 		filter: drop-shadow(3px 3px);
-		margin: 0 10px 20px 10px;
 	}
 
 /* ----------- Nav Hell Ends ----------- */
@@ -398,7 +362,7 @@ footer p {
 
 	.container-gallery {
 		grid-template: 
-		"nav"
+		"nav-gallery"
 		"gallery"
 	;
 	grid-gap: 20px;
